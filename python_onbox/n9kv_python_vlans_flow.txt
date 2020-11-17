@@ -1,0 +1,9 @@
+import cisco
+help(cisco)
+help(cisco.vlan)
+vl = cisco.vlan.Vlan()
+vl.show_vlan().get_vlans()
+vl.create_vlan(2)
+vl.show_vlan().get_vlans()
+vl.delete_vlan(2)
+vl.show_vlan().get_vlans()
