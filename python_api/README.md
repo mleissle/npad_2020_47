@@ -2,6 +2,7 @@
 ## Netconf
 - Zur Vorbereitung installieren Sie ggf. `pip`:
 ```
+sudo apt update
 sudo apt install python3-pip
 ```
 Danach nutzen Sie pip um das Python-Paket für die Netconf-API zu installieren:
