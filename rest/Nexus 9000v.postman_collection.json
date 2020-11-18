@@ -1,0 +1,448 @@
+{
+	"info": {
+		"_postman_id": "6d9e55b1-99cd-4b5d-9b3f-3267c497cc2b",
+		"name": "Nexus 9000v",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "cisco",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n\"aaaUser\" : {\r\n\r\n\"attributes\" : {\r\n\r\n\"name\" : \"admin\",\r\n\r\n\"pwd\" : \"cisco\"\r\n\r\n}\r\n\r\n}\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://192.168.181.23/api/aaaLogin.json?gui-token-request=yes",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"181",
+						"23"
+					],
+					"path": [
+						"api",
+						"aaaLogin.json"
+					],
+					"query": [
+						{
+							"key": "gui-token-request",
+							"value": "yes"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BGP",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "cisco",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "APIc-challenge",
+						"value": "cac34f3a52a575f243ff7f5fdd1d68ef7f42a65acf1c768ab404780a87a0cda3"
+					}
+				],
+				"url": {
+					"raw": "http://192.168.181.23/api/mo/sys/bgp.json",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"181",
+						"23"
+					],
+					"path": [
+						"api",
+						"mo",
+						"sys",
+						"bgp.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BGP AS",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "cisco",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "APIc-challenge",
+						"value": "cac34f3a52a575f243ff7f5fdd1d68ef7f42a65acf1c768ab404780a87a0cda3"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bgpEntity\": {\r\n        \"children\": [{\r\n            \"bgpInst\": {\r\n                \"attributes\": {\r\n                    \"asn\": \"12345\"\r\n                }\r\n            }\r\n        }]\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.181.23/api/mo/sys/bgp.json",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"181",
+						"23"
+					],
+					"path": [
+						"api",
+						"mo",
+						"sys",
+						"bgp.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BGP INS",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "cisco",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "APIc-challenge",
+						"value": "cac34f3a52a575f243ff7f5fdd1d68ef7f42a65acf1c768ab404780a87a0cda3"
+					}
+				],
+				"url": {
+					"raw": "http://192.168.181.23/api/mo/sys/bgp/inst.json",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"181",
+						"23"
+					],
+					"path": [
+						"api",
+						"mo",
+						"sys",
+						"bgp",
+						"inst.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BGP INS",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "cisco",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "APIc-challenge",
+						"value": "cac34f3a52a575f243ff7f5fdd1d68ef7f42a65acf1c768ab404780a87a0cda3"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"bgpInst\": {\n        \"attributes\": {\n            \"asn\": \"12345\"\n        },\n        \"children\": [{\n            \"bgpDom\": {\n                \"attributes\": {\n                    \"name\": \"default\",\n                    \"rtrId\": \"7.7.7.7\"\n                }\n            }\n        }]\n    }\n}"
+				},
+				"url": {
+					"raw": "http://192.168.181.23/api/mo/sys/bgp/inst.json",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"181",
+						"23"
+					],
+					"path": [
+						"api",
+						"mo",
+						"sys",
+						"bgp",
+						"inst.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BGP INS Neighbor",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "cisco",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "APIc-challenge",
+						"value": "cac34f3a52a575f243ff7f5fdd1d68ef7f42a65acf1c768ab404780a87a0cda3"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"bgpInst\": {\n        \"attributes\": {\n            \"asn\": \"12345\"\n        },\n        \"children\": [{\n            \"bgpDom\": {\n                \"attributes\": {\n                    \"name\": \"default\",\n                    \"rtrId\": \"7.7.7.7\"\n                }, \"children\": [{\"bgpPeer\": {\n        \t\t\t\t\t\t    \"attributes\": {\n                \t\t\t\t\t\t\"addr\": \"20.20.20.20\",\n                \t\t\t\t\t\t\"inheritContPeerCtrl\": \"\"\n                \t\t\t\t\t}\n                \t\t\t\t}\n            \t\t\t\t}\n                \t]\n            }\n        }]\n    }\n}"
+				},
+				"url": {
+					"raw": "http://192.168.181.23/api/mo/sys/bgp/inst.json",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"181",
+						"23"
+					],
+					"path": [
+						"api",
+						"mo",
+						"sys",
+						"bgp",
+						"inst.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DEL BGP",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "cisco",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "APIc-challenge",
+						"value": "cac34f3a52a575f243ff7f5fdd1d68ef7f42a65acf1c768ab404780a87a0cda3"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"bgpEntity\": {\n        \"children\": [{\n            \"bgpInst\": {\n                \"attributes\": {\n                    \"status\": \"deleted\"\n                }\n            }\n        }]\n    }\n}"
+				},
+				"url": {
+					"raw": "http://192.168.181.23/api/mo/sys/bgp.json",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"181",
+						"23"
+					],
+					"path": [
+						"api",
+						"mo",
+						"sys",
+						"bgp.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IETF Capabilities",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "cisco",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/yang.data+xml"
+					}
+				],
+				"url": {
+					"raw": "http://192.168.181.23/restconf/data/ietf-restconf-monitoring:restconf-state/capabilities",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"181",
+						"23"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"ietf-restconf-monitoring:restconf-state",
+						"capabilities"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
